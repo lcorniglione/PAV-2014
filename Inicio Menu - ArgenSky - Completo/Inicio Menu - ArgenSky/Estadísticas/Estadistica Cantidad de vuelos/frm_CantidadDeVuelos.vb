@@ -29,7 +29,7 @@
         Me.cvr_CantidadDeVuelos.Refresh()
     End Sub
 
-    Private Sub frm_CantidadDeVuelos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs
+    Private Sub frm_CantidadDeVuelos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.cmb_año.Text = ""
         Me.cmb_año.SelectedText = ""
         Me.cmb_año.Focus()

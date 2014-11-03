@@ -23,13 +23,13 @@
 
 
 
-        consulta = "SELECt Pasaje.id_Pasajero, Pasaje.id_Vuelo, Pasajeros.nombre_Pasajero, Pasajeros.apellido_Pasajero, Pasajeros.numero_Documento FROM Pasaje INNER JOIN Pasajeros ON Pasaje.id_Pasajero = Pasajeros.id_Pasajero"
+        consulta = "SELECt Pasaje.id_Pasajero, Pasajeros.nombre_Pasajero, Pasajeros.apellido_Pasajero, Pasajeros.numero_Documento FROM Pasaje INNER JOIN Pasajeros ON Pasaje.id_Pasajero = Pasajeros.id_Pasajero WHERE Pasaje.id_Vuelo = " & Me.txt_numeroVuelo.Text & " AND Pasaje.id_Pasajero = " & Me.txt_numeroPasaje.Text
         tabla = BDHelper.ConsultaSQL(consulta)
 
-        txt_apellido.Text = tabla.Rows(0)(3)
+        txt_apellido.Text = tabla.Rows(0)(2)
         txt_idPasajero.Text = tabla.Rows(0)(0)
-        txt_nombre.Text = tabla.Rows(0)(2)
-        txt_numeroDoc.Text = tabla.Rows(0)(4)
+        txt_nombre.Text = tabla.Rows(0)(1)
+        txt_numeroDoc.Text = tabla.Rows(0)(3)
 
         txt_idPasajero.Enabled = False
         estadopasajero = pasajero.encontrado
@@ -153,8 +153,8 @@
             cantidad = tabla.Rows(0)(0) + 1
             txt_numAsiento.Text = cantidad
             consulta = ""
-            consulta = "INSERT INTO Tarjeta_Embarque (id_Pasajero, id_Vuelo, atencion_Especial, numero_Asiento, letra_Asiento, id_Aeronave, deleted) "
-            consulta &= "VALUES (" & Me.txt_idPasajero.Text & ", " & txt_numeroVuelo.Text & ", " & ae & ", " & txt_numAsiento.Text & ", 'A'," & idAeronave & ", 0)"
+            consulta = "INSERT INTO Tarjeta_Embarque (id_Pasajero, id_Vuelo, atencion_Especial, numero_Asiento, letra_Asiento, id_Aeronave, puerta_Embarque, deleted) "
+            consulta &= "VALUES (" & Me.txt_idPasajero.Text & ", " & txt_numeroVuelo.Text & ", " & ae & ", " & txt_numAsiento.Text & ", 'A'," & idAeronave & ", 5, 0)"
             BDHelper.EjecutarSQL(consulta)
             consulta = ""
             consulta = "INSERT INTO Equipaje (id_Pasajero, id_Vuelo, peso, bodega, especial, cant_bultos, deleted) VALUES(" & txt_idPasajero.Text & "," & txt_numeroVuelo.Text & "," & txt_peso.Text & "," & bodega & "," & especial & "," & txt_cantbultos.Text & ", 0)"

@@ -1,7 +1,7 @@
 ﻿Public Class ReporteEquipajeXPersona
 
     Private Sub crv_Equipaje_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles crv_Equipaje.Load
-        llenar_combo(cbo_vuelo, "Aeronaves", "id_Aeronave", "id_Aeronave")
+        llenar_combo(cbo_vuelo, "Vuelos", "id_Vuelo", "id_Vuelo")
 
     End Sub
 
@@ -82,6 +82,10 @@
             llenar_combo1(cbo_Pasajero, "Tarjeta_Embarque", "id_Pasajero", "id_Pasajero")
         End If
 
+
+    End Sub
+
+    Private Sub ReporteEquipajeXPersona_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

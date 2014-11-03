@@ -24,12 +24,12 @@ Partial Class ReporteEquipajeXPersona
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ReporteEquipajeXPersona))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.crv_Equipaje = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.cbo_vuelo = New System.Windows.Forms.ComboBox()
-        Me.cbo_Pasajero = New System.Windows.Forms.ComboBox()
         Me.btn_generar = New System.Windows.Forms.Button()
+        Me.cbo_Pasajero = New System.Windows.Forms.ComboBox()
+        Me.cbo_vuelo = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.crv_Equipaje = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -47,24 +47,30 @@ Partial Class ReporteEquipajeXPersona
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Filtro de Reporte"
         '
-        'crv_Equipaje
+        'btn_generar
         '
-        Me.crv_Equipaje.ActiveViewIndex = -1
-        Me.crv_Equipaje.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.crv_Equipaje.Cursor = System.Windows.Forms.Cursors.Default
-        Me.crv_Equipaje.Location = New System.Drawing.Point(13, 79)
-        Me.crv_Equipaje.Name = "crv_Equipaje"
-        Me.crv_Equipaje.Size = New System.Drawing.Size(849, 544)
-        Me.crv_Equipaje.TabIndex = 1
+        Me.btn_generar.Location = New System.Drawing.Point(742, 15)
+        Me.btn_generar.Name = "btn_generar"
+        Me.btn_generar.Size = New System.Drawing.Size(75, 23)
+        Me.btn_generar.TabIndex = 5
+        Me.btn_generar.Text = "Generar"
+        Me.btn_generar.UseVisualStyleBackColor = True
         '
-        'Label1
+        'cbo_Pasajero
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(262, 20)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(51, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "ID. Vuelo"
+        Me.cbo_Pasajero.FormattingEnabled = True
+        Me.cbo_Pasajero.Location = New System.Drawing.Point(559, 17)
+        Me.cbo_Pasajero.Name = "cbo_Pasajero"
+        Me.cbo_Pasajero.Size = New System.Drawing.Size(121, 21)
+        Me.cbo_Pasajero.TabIndex = 4
+        '
+        'cbo_vuelo
+        '
+        Me.cbo_vuelo.FormattingEnabled = True
+        Me.cbo_vuelo.Location = New System.Drawing.Point(333, 17)
+        Me.cbo_vuelo.Name = "cbo_vuelo"
+        Me.cbo_vuelo.Size = New System.Drawing.Size(121, 21)
+        Me.cbo_vuelo.TabIndex = 3
         '
         'Label2
         '
@@ -75,30 +81,24 @@ Partial Class ReporteEquipajeXPersona
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "ID. Pasajero"
         '
-        'cbo_vuelo
+        'Label1
         '
-        Me.cbo_vuelo.FormattingEnabled = True
-        Me.cbo_vuelo.Location = New System.Drawing.Point(333, 17)
-        Me.cbo_vuelo.Name = "cbo_vuelo"
-        Me.cbo_vuelo.Size = New System.Drawing.Size(121, 21)
-        Me.cbo_vuelo.TabIndex = 3
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(262, 20)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(51, 13)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "ID. Vuelo"
         '
-        'cbo_Pasajero
+        'crv_Equipaje
         '
-        Me.cbo_Pasajero.FormattingEnabled = True
-        Me.cbo_Pasajero.Location = New System.Drawing.Point(559, 17)
-        Me.cbo_Pasajero.Name = "cbo_Pasajero"
-        Me.cbo_Pasajero.Size = New System.Drawing.Size(121, 21)
-        Me.cbo_Pasajero.TabIndex = 4
-        '
-        'btn_generar
-        '
-        Me.btn_generar.Location = New System.Drawing.Point(742, 15)
-        Me.btn_generar.Name = "btn_generar"
-        Me.btn_generar.Size = New System.Drawing.Size(75, 23)
-        Me.btn_generar.TabIndex = 5
-        Me.btn_generar.Text = "Generar"
-        Me.btn_generar.UseVisualStyleBackColor = True
+        Me.crv_Equipaje.ActiveViewIndex = -1
+        Me.crv_Equipaje.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.crv_Equipaje.Cursor = System.Windows.Forms.Cursors.Default
+        Me.crv_Equipaje.Location = New System.Drawing.Point(13, 79)
+        Me.crv_Equipaje.Name = "crv_Equipaje"
+        Me.crv_Equipaje.Size = New System.Drawing.Size(849, 544)
+        Me.crv_Equipaje.TabIndex = 1
         '
         'ReporteEquipajeXPersona
         '
