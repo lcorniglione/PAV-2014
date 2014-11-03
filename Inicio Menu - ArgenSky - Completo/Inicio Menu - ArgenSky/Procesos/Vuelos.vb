@@ -86,10 +86,10 @@
         txt_fechaHoraOrigen.Clear()
         cbo_Estados.SelectedIndex = 0
         lbl_marcaAvion.Visible = False
-        cbo_LocalidadOrigen.SelectedIndex = 0
-        cbo_localidadDestino.SelectedIndex = 0
-        cbo_AeropuertoOrigen.SelectedIndex = 0
-        cbo_aeropuertoDestino.SelectedIndex = 0
+        'cbo_LocalidadOrigen.SelectedIndex = 0
+        'cbo_localidadDestino.SelectedIndex = 0
+        'cbo_AeropuertoOrigen.SelectedIndex = 0
+        'cbo_aeropuertoDestino.SelectedIndex = 0
         cbo_piloto.SelectedIndex = 0
         cbo_copiloto.SelectedIndex = 0
         cbo_comisarioDeAbordo.SelectedIndex = 0
@@ -180,6 +180,25 @@
         lbl_marcaAvion.Text = table.Rows(0)(0)
     End Sub
 
+    Private Function validarFechas(ByVal fecha As String)
+        Dim d As DateTime
+        Try
+            d = fecha.ToString
+        Catch ex As Exception
+            MessageBox.Show("Formato de fechas incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            Return -1
+        End Try
+
+        'Dim año As Integer = d.Year
+        'Dim mes As Integer = d.Month
+        'Dim dia As Integer = d.Day
+        'Dim hora As Integer = d.Hour
+        'Dim minutos As Integer = d.Minute
+        'Dim fechaFin As String = año & "-" & mes & "-" & dia & " " & hora & ":" & minutos
+        Return 1
+
+    End Function
+
     Private Sub btn_guardarTripulacion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_guardarTripulacion.Click
 
         If (txt_fechaHoraOrigen.MaskFull = False) Then
@@ -191,9 +210,19 @@
             Return
         End If
 
-
         If (cbo_aeropuertoDestino.Text = cbo_AeropuertoOrigen.Text) Then
             MessageBox.Show("Origen y destino no pueden ser iguales válida", "Validación de campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            Return
+        End If
+
+        If (validarFechas(txt_fechaHoraOrigen.Text) < 0) Then
+            Return
+        End If
+        If (validarFechas(txt_fechaHoraDestino.Text) < 0) Then
+            Return
+        End If
+        If (txt_fechaHoraOrigen.Text > txt_fechaHoraDestino.Text) Then
+            MessageBox.Show("Fecha y hora de salida no puede ser mayor a la fecha y hora de llegada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             Return
         End If
 
@@ -220,7 +249,7 @@
         If (rest = True) Then
             MessageBox.Show("Nuevo Vuelo registrado correctamente", "Mensaje de inserción", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Else
-            MessageBox.Show("El Vuelo no puedo registrarse", "Error de inserción", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            'MessageBox.Show("El Vuelo no puedo registrarse", "Error de inserción", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
 
         estadoInicial()
@@ -268,7 +297,7 @@
 
         con = New Data.SqlClient.SqlConnection(string_conexion)
         con.Open()
-
+        
 
         cmd.Connection = con
         cmd.CommandType = CommandType.Text
@@ -276,7 +305,8 @@
         cmd.Transaction = MyTran
         Try
             Dim consulta1 As String = "INSERT INTO Vuelos (id_Vuelo, id_Aeronave, aeropuerto_Origen, aeropuerto_Destino, estado, fechaHora_Llegada, fechaHora_Salida)"
-            consulta1 = consulta1 + " VALUES (" & Me.txt_idVuelo.Text & ", " & cbo_aeronaves.SelectedValue & ", " & cbo_AeropuertoOrigen.SelectedValue & ", " & cbo_aeropuertoDestino.SelectedValue & ", " & cbo_Estados.SelectedValue & ", '" & txt_fechaHoraDestino.Text & "', '" & txt_fechaHoraDestino.Text & "')"
+            'consulta1 = consulta1 + " VALUES (" & Me.txt_idVuelo.Text & ", " & cbo_aeronaves.SelectedValue & ", " & cbo_AeropuertoOrigen.SelectedValue & ", " & cbo_aeropuertoDestino.SelectedValue & ", " & cbo_Estados.SelectedValue & ", '" & txt_fechaHoraDestino.Text & "', '" & txt_fechaHoraOrigen.Text & "')"
+            consulta1 = consulta1 + " VALUES (" & Me.txt_idVuelo.Text & ", " & cbo_aeronaves.SelectedValue & ", " & cbo_AeropuertoOrigen.SelectedValue & ", " & cbo_aeropuertoDestino.SelectedValue & ", " & cbo_Estados.SelectedValue & ", CONVERT(VARCHAR()," & txt_fechaHoraDestino.Text & ", 103), CONVERT(VARCHAR()," & txt_fechaHoraDestino.Text & ", 103)"
             cmd.CommandText = consulta1
             cmd.ExecuteNonQuery()
 
@@ -346,7 +376,7 @@
             grd_Vuelos.DataSource = dt
             Return True
         Else
-            MessageBox.Show("El vuelo no existe", "Error de búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1)
+            'MessageBox.Show("El vuelo no existe", "Error de búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1)
 
             Return False
         End If

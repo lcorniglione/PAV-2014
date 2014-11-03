@@ -357,16 +357,17 @@ Partial Class frm_InicioMenu
         '
         Me.lbl_Fecha.AutoSize = True
         Me.lbl_Fecha.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.lbl_Fecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Fecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Fecha.Location = New System.Drawing.Point(51, 47)
         Me.lbl_Fecha.Name = "lbl_Fecha"
-        Me.lbl_Fecha.Size = New System.Drawing.Size(46, 16)
+        Me.lbl_Fecha.Size = New System.Drawing.Size(49, 18)
         Me.lbl_Fecha.TabIndex = 0
         Me.lbl_Fecha.Text = "Fecha"
         Me.lbl_Fecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Timer1
         '
+        Me.Timer1.Enabled = True
         '
         'btn_aeronavesMasUtilizadas
         '

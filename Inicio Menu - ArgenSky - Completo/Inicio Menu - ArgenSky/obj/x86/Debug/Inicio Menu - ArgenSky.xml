@@ -6,35 +6,19 @@ InicioMenu-ArgenSky
 </name>
 </assembly>
 <members>
-<member name="T:WindowsApplication1.dsReporteAXP.AXPDataTable">
+<member name="T:WindowsApplication1.DataSetReporte.DataTable1DataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:WindowsApplication1.dsReporteAXP.AXPRow">
+</member><member name="T:WindowsApplication1.DataSetReporte.DataTable1Row">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:WindowsApplication1.dsReporteAXP.AXPRowChangeEvent">
+</member><member name="T:WindowsApplication1.DataSetReporte.DataTable1RowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:WindowsApplication1.dsReporteAXP">
-	<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member><member name="T:WindowsApplication1.CantidadDeVuelos.Cantidad_De_VuelosDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:WindowsApplication1.CantidadDeVuelos.Cantidad_De_VuelosRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:WindowsApplication1.CantidadDeVuelos.Cantidad_De_VuelosRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:WindowsApplication1.CantidadDeVuelos">
+</member><member name="T:WindowsApplication1.DataSetReporte">
 	<summary>
 Represents a strongly typed in-memory cache of data.
 </summary>
@@ -67,6 +51,38 @@ Represents strongly named DataRow class.
 Row event argument class
 </summary>
 </member><member name="T:WindowsApplication1.DSEquipaje">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:WindowsApplication1.dsReporteAXP.AXPDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:WindowsApplication1.dsReporteAXP.AXPRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:WindowsApplication1.dsReporteAXP.AXPRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:WindowsApplication1.dsReporteAXP">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:WindowsApplication1.CantidadDeVuelos.Cantidad_De_VuelosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:WindowsApplication1.CantidadDeVuelos.Cantidad_De_VuelosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:WindowsApplication1.CantidadDeVuelos.Cantidad_De_VuelosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:WindowsApplication1.CantidadDeVuelos">
 	<summary>
 Represents a strongly typed in-memory cache of data.
 </summary>
@@ -170,22 +186,6 @@ Represents a strongly typed in-memory cache of data.
 </member><member name="T:WindowsApplication1.My.Resources.Resources">
 	<summary>
   Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
-</summary>
-</member><member name="T:WindowsApplication1.DataSetReporte.DataTable1DataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:WindowsApplication1.DataSetReporte.DataTable1Row">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:WindowsApplication1.DataSetReporte.DataTable1RowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:WindowsApplication1.DataSetReporte">
-	<summary>
-Represents a strongly typed in-memory cache of data.
 </summary>
 </member>
 </members>
