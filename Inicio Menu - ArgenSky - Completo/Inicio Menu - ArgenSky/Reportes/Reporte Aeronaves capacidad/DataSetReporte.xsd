@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetReporte" targetNamespace="http://tempuri.org/DataSetReporte.xsd" xmlns:mstns="http://tempuri.org/DataSetReporte.xsd" xmlns="http://tempuri.org/DataSetReporte.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetReporte" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetReporte" msprop:Generator_UserDSName="DataSetReporte">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Aeronave" msprop:Generator_ColumnVarNameInTable="columnid_Aeronave" msprop:Generator_ColumnPropNameInRow="id_Aeronave" msprop:Generator_ColumnPropNameInTable="id_AeronaveColumn" msprop:Generator_UserColumnName="id_Aeronave" type="xs:short" minOccurs="0" />
+              <xs:element name="nombre_Marca" msprop:Generator_ColumnVarNameInTable="columnnombre_Marca" msprop:Generator_ColumnPropNameInRow="nombre_Marca" msprop:Generator_ColumnPropNameInTable="nombre_MarcaColumn" msprop:Generator_UserColumnName="nombre_Marca" type="xs:string" minOccurs="0" />
+              <xs:element name="asientos" msprop:Generator_ColumnVarNameInTable="columnasientos" msprop:Generator_ColumnPropNameInRow="asientos" msprop:Generator_ColumnPropNameInTable="asientosColumn" msprop:Generator_UserColumnName="asientos" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

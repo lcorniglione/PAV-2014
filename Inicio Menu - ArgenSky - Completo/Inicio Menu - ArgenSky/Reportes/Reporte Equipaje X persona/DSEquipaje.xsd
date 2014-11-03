@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSEquipaje" targetNamespace="http://tempuri.org/DSEquipaje.xsd" xmlns:mstns="http://tempuri.org/DSEquipaje.xsd" xmlns="http://tempuri.org/DSEquipaje.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSEquipaje" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSEquipaje" msprop:Generator_UserDSName="DSEquipaje">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Pasajero" msprop:Generator_ColumnVarNameInTable="columnid_Pasajero" msprop:Generator_ColumnPropNameInRow="id_Pasajero" msprop:Generator_ColumnPropNameInTable="id_PasajeroColumn" msprop:Generator_UserColumnName="id_Pasajero" type="xs:long" minOccurs="0" />
+              <xs:element name="peso" msprop:Generator_ColumnVarNameInTable="columnpeso" msprop:Generator_ColumnPropNameInRow="peso" msprop:Generator_ColumnPropNameInTable="pesoColumn" msprop:Generator_UserColumnName="peso" type="xs:double" minOccurs="0" />
+              <xs:element name="bodega" msprop:Generator_ColumnVarNameInTable="columnbodega" msprop:Generator_ColumnPropNameInRow="bodega" msprop:Generator_ColumnPropNameInTable="bodegaColumn" msprop:Generator_UserColumnName="bodega" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="especial" msprop:Generator_ColumnVarNameInTable="columnespecial" msprop:Generator_ColumnPropNameInRow="especial" msprop:Generator_ColumnPropNameInTable="especialColumn" msprop:Generator_UserColumnName="especial" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="cant_bultos" msprop:Generator_ColumnVarNameInTable="columncant_bultos" msprop:Generator_ColumnPropNameInRow="cant_bultos" msprop:Generator_ColumnPropNameInTable="cant_bultosColumn" msprop:Generator_UserColumnName="cant_bultos" type="xs:long" minOccurs="0" />
+              <xs:element name="nombre_Pasajero" msprop:Generator_ColumnVarNameInTable="columnnombre_Pasajero" msprop:Generator_ColumnPropNameInRow="nombre_Pasajero" msprop:Generator_ColumnPropNameInTable="nombre_PasajeroColumn" msprop:Generator_UserColumnName="nombre_Pasajero" type="xs:string" minOccurs="0" />
+              <xs:element name="apellido_Pasajero" msprop:Generator_ColumnVarNameInTable="columnapellido_Pasajero" msprop:Generator_ColumnPropNameInRow="apellido_Pasajero" msprop:Generator_ColumnPropNameInTable="apellido_PasajeroColumn" msprop:Generator_UserColumnName="apellido_Pasajero" type="xs:string" minOccurs="0" />
+              <xs:element name="numero_Documento" msprop:Generator_ColumnVarNameInTable="columnnumero_Documento" msprop:Generator_ColumnPropNameInRow="numero_Documento" msprop:Generator_ColumnPropNameInTable="numero_DocumentoColumn" msprop:Generator_UserColumnName="numero_Documento" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
