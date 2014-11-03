@@ -189,12 +189,7 @@
             Return -1
         End Try
 
-        'Dim año As Integer = d.Year
-        'Dim mes As Integer = d.Month
-        'Dim dia As Integer = d.Day
-        'Dim hora As Integer = d.Hour
-        'Dim minutos As Integer = d.Minute
-        'Dim fechaFin As String = año & "-" & mes & "-" & dia & " " & hora & ":" & minutos
+        
         Return 1
 
     End Function
@@ -305,8 +300,7 @@
         cmd.Transaction = MyTran
         Try
             Dim consulta1 As String = "INSERT INTO Vuelos (id_Vuelo, id_Aeronave, aeropuerto_Origen, aeropuerto_Destino, estado, fechaHora_Llegada, fechaHora_Salida)"
-            'consulta1 = consulta1 + " VALUES (" & Me.txt_idVuelo.Text & ", " & cbo_aeronaves.SelectedValue & ", " & cbo_AeropuertoOrigen.SelectedValue & ", " & cbo_aeropuertoDestino.SelectedValue & ", " & cbo_Estados.SelectedValue & ", '" & txt_fechaHoraDestino.Text & "', '" & txt_fechaHoraOrigen.Text & "')"
-            consulta1 = consulta1 + " VALUES (" & Me.txt_idVuelo.Text & ", " & cbo_aeronaves.SelectedValue & ", " & cbo_AeropuertoOrigen.SelectedValue & ", " & cbo_aeropuertoDestino.SelectedValue & ", " & cbo_Estados.SelectedValue & ", CONVERT(VARCHAR()," & txt_fechaHoraDestino.Text & ", 103), CONVERT(VARCHAR()," & txt_fechaHoraDestino.Text & ", 103)"
+            consulta1 = consulta1 + " VALUES (" & Me.txt_idVuelo.Text & ", " & cbo_aeronaves.SelectedValue & ", " & cbo_AeropuertoOrigen.SelectedValue & ", " & cbo_aeropuertoDestino.SelectedValue & ", " & cbo_Estados.SelectedValue & ", '" & txt_fechaHoraDestino.Text & "', '" & txt_fechaHoraOrigen.Text & "')"
             cmd.CommandText = consulta1
             cmd.ExecuteNonQuery()
 
